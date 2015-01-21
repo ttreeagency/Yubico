@@ -1,0 +1,14 @@
+{
+    "name": "ttree/yubico",
+    "type": "typo3-flow-package",
+    "description": "Two factors authentication for TYPO3 Flow and TYPO3 Neos",
+    "require": {
+        "typo3/flow": "*",
+        "enygma/yubikey": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Ttree\\Yubico": "Classes"
+        }
+    }
+}
