@@ -13,6 +13,6 @@ Neos:
     security:
       authentication:
         providers:
-          Typo3BackendProvider:
+          'Neos.Neos:Backend':
             provider: \Ttree\Yubico\Authentication\Provider\PersistedUsernamePasswordProvider
             tokenClass: \Ttree\Yubico\Authentication\Token\UsernamePassword
