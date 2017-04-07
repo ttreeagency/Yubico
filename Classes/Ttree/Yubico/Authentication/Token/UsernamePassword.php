@@ -11,10 +11,10 @@ namespace Ttree\Yubico\Authentication\Token;
  * The TYPO3 project - inspiring people to share!                         *
  *                                                                        */
 
-use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Flow\Mvc\ActionRequest;
-use TYPO3\Flow\Reflection\ObjectAccess;
-use TYPO3\Flow\Security\Authentication\Token\AbstractToken;
+use Neos\Flow\Annotations as Flow;
+use Neos\Flow\Mvc\ActionRequest;
+use Neos\Flow\Reflection\ObjectAccess;
+use Neos\Flow\Security\Authentication\Token\AbstractToken;
 
 /**
  * An authentication token used for simple username and password authentication.

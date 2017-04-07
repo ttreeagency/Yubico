@@ -15,18 +15,18 @@ use Ttree\Yubico\Authentication\Token\UsernamePassword;
 use Ttree\Yubico\Domain\Model\Key;
 use Ttree\Yubico\Domain\Repository\KeyRepository;
 use Ttree\Yubico\Service\OneTimePasswordService;
-use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Flow\Persistence\PersistenceManagerInterface;
-use TYPO3\Flow\Security\Account;
-use TYPO3\Flow\Security\Authentication\TokenInterface;
-use TYPO3\Flow\Security\Exception\UnsupportedAuthenticationTokenException;
+use Neos\Flow\Annotations as Flow;
+use Neos\Flow\Persistence\PersistenceManagerInterface;
+use Neos\Flow\Security\Account;
+use Neos\Flow\Security\Authentication\TokenInterface;
+use Neos\Flow\Security\Exception\UnsupportedAuthenticationTokenException;
 
 /**
  * An authentication provider that authenticates
- * TYPO3\Flow\Security\Authentication\Token\UsernamePassword tokens.
+ * Neos\Flow\Security\Authentication\Token\UsernamePassword tokens.
  * The accounts are stored in the Content Repository.
  */
-class PersistedUsernamePasswordProvider extends \TYPO3\Flow\Security\Authentication\Provider\PersistedUsernamePasswordProvider {
+class PersistedUsernamePasswordProvider extends \Neos\Flow\Security\Authentication\Provider\PersistedUsernamePasswordProvider {
 
 	/**
 	 * @Flow\Inject
@@ -59,16 +59,16 @@ class PersistedUsernamePasswordProvider extends \TYPO3\Flow\Security\Authenticat
 	 * Checks the given token for validity and sets the token authentication status
 	 * accordingly (success, wrong credentials or no credentials given).
 	 *
-	 * @param \TYPO3\Flow\Security\Authentication\TokenInterface $authenticationToken The token to be authenticated
+	 * @param \Neos\Flow\Security\Authentication\TokenInterface $authenticationToken The token to be authenticated
 	 * @return void
-	 * @throws \TYPO3\Flow\Security\Exception\UnsupportedAuthenticationTokenException
+	 * @throws \Neos\Flow\Security\Exception\UnsupportedAuthenticationTokenException
 	 */
 	public function authenticate(TokenInterface $authenticationToken) {
 		if (!($authenticationToken instanceof UsernamePassword)) {
 			throw new UnsupportedAuthenticationTokenException('This provider cannot authenticate the given token.', 1217339840);
 		}
 
-		/** @var $account \TYPO3\Flow\Security\Account */
+		/** @var $account \Neos\Flow\Security\Account */
 		$account = NULL;
 		$credentials = $authenticationToken->getCredentials();
 

@@ -12,8 +12,8 @@ namespace Ttree\Yubico\Service;
  *                                                                        */
 
 use Doctrine\ORM\Mapping as ORM;
-use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Flow\Log\SystemLoggerInterface;
+use Neos\Flow\Annotations as Flow;
+use Neos\Flow\Log\SystemLoggerInterface;
 use Yubikey\Validate;
 
 /**

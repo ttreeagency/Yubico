@@ -1,24 +1,18 @@
-TYPO3:
 
+Ttree:
+  Yubico:
+    api:
+      clientId: '[replace by your own]'
+      secrectKey: '[replace by your own]'
+Neos:
   Flow:
-
     object:
       excludeClasses:
-       'enygma.yubikey': ['Yubikey\\.*']
-
+        enygma.yubikey:
+          - 'Yubikey\\.*'
     security:
       authentication:
         providers:
           Typo3BackendProvider:
-            provider: '\Ttree\Yubico\Authentication\Provider\PersistedUsernamePasswordProvider'
-            tokenClass: '\Ttree\Yubico\Authentication\Token\UsernamePassword'
-
-Ttree:
-
-  Yubico:
-
-    api:
-
-      # You can get your own keys from https://upgrade.yubico.com/getapikey/
-      clientId: '[replace by your own]'
-      secrectKey: '[replace by your own]'
+            provider: \Ttree\Yubico\Authentication\Provider\PersistedUsernamePasswordProvider
+            tokenClass: \Ttree\Yubico\Authentication\Token\UsernamePassword
