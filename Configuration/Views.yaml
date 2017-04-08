@@ -1,3 +1,4 @@
+---
 -
   requestFilter: 'mainRequest.isPackage("Neos.Neos") && mainRequest.isController("Login") && mainRequest.isAction("index") && mainRequest.isFormat("html")'
   options:

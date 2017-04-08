@@ -4,15 +4,12 @@ Ttree:
     api:
       clientId: '[replace by your own]'
       secrectKey: '[replace by your own]'
+
 Neos:
   Flow:
-    object:
-      excludeClasses:
-        enygma.yubikey:
-          - 'Yubikey\\.*'
     security:
       authentication:
         providers:
           'Neos.Neos:Backend':
-            provider: \Ttree\Yubico\Authentication\Provider\PersistedUsernamePasswordProvider
-            tokenClass: \Ttree\Yubico\Authentication\Token\UsernamePassword
+            provider: Ttree\Yubico\Authentication\Provider\PersistedUsernamePasswordProvider
+            tokenClass: Ttree\Yubico\Authentication\Token\UsernamePassword
