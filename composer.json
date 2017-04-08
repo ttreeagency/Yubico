@@ -1,14 +1,15 @@
 {
     "name": "ttree/yubico",
-    "type": "typo3-flow-package",
+    "type": "neos-package",
+    "license": "MIT",
     "description": "Two factors authentication for TYPO3 Flow and TYPO3 Neos",
     "require": {
-        "typo3/flow": "*",
-        "enygma/yubikey": "*"
+        "typo3/flow": "^3.0.0",
+        "enygma/yubikey": "^3.2.0"
     },
     "autoload": {
-        "psr-0": {
-            "Ttree\\Yubico": "Classes"
+        "psr-4": {
+            "Ttree\\Yubico\\": "Classes"
         }
     },
     "extra": {
